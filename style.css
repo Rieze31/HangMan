@@ -314,7 +314,12 @@
 }
 #win-man.lose {
 
-  width: 400px;
+  width: 350px;
+}
+.background-behind-img {
+
+  height: 150px;
+ 
 }
 }
 @keyframes beat{
