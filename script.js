@@ -24,7 +24,7 @@ let hangman = document.getElementById("hangman");
 let win = new Audio('audio/win-bg.mp3');
 let cheer = new Audio('audio/cheer.mp3');
  let gameBg = new Audio('audio/game-music.mp3');
-
+let bg = document.querySelector(".background-behind-img");
 let index = Math.floor(Math.random() * words.length);
 let blank = [];
 let lives = 6;
@@ -152,8 +152,8 @@ function showResult() {
     result.style.color = "#00FFFF";
     bg.style.background = "radial-gradient(circle, #00ffff88, #00000000 70%)";
     resultText.innerHTML = `You have successfully guessed the word <span style="color:#00FFFF; font-weight:bold; text-transform:uppercase; font-family:Montserrat, sans-serif">${words[index]}</span>.`;
-    resultImage.style.width = "200px";
- 
+
+ bg.classList.remove("lose-bg");
     resultImage.classList.remove("lose");
     resultImage.src = "img/alive.png"; 
     }, 1500);
@@ -170,9 +170,10 @@ function showResult() {
     result.style.color = "#ff1e1e";
     bg.style.background = "radial-gradient(circle, #ff1e1e, #00000000 70%)";
     resultText.innerHTML = `You have failed to guess the word <span style="color:#ff1e1e; font-weight:bold; text-transform:uppercase; font-family:Montserrat, sans-serif">${words[index]}</span>.`;
-    
-    resultImage.src = "img/dead.png";
+     bg.classList.add("lose-bg");
    resultImage.classList.add("lose");
+    resultImage.src = "img/dead.png";
+   
  
     
     
@@ -187,7 +188,9 @@ function showResult() {
 function isWordGuessed(blank) {
     for (let i = 0; i < blank.length; i++) {
         if (blank[i].innerHTML === "_") {
+            
             return false; 
+            
         }
     }
     

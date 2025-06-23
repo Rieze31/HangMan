@@ -19,7 +19,7 @@
     background-size: cover;
     height: 100vh;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 0; 
     margin: 0;
     position: relative;
@@ -159,8 +159,9 @@
   font-family: AmongUse;
     
     width: 100%;
-    
     min-height: 100vh;
+
+    
     padding: 50px 0;
     background-color: black;
     color: #00FFFF;
@@ -171,11 +172,12 @@
     text-align: center;
     margin: auto;
 
+
     z-index: 10;
     animation: fadeDown 0.8s ease-in-out;
 }
 #game-result h1 {
-    font-size: 48px;
+    font-size: 62px;
     font-weight: 900;
     margin-bottom: 10px;
 }
@@ -213,7 +215,7 @@
 #win-man{
     position: relative;
   z-index: 1; 
-  width: 200px;
+  width: 150px;
 }
 #win-man.lose {
 
@@ -268,10 +270,10 @@
   
 }
 #game-result h1 {
-    font-size: 36px;
+    font-size: 50px;
 }
 #game-result p {
-    font-size: 18px;
+    font-size: 16px;
 
 }
 #win-man.lose {
@@ -298,21 +300,17 @@
   
 }
 #game-result h1 {
-    font-size: 24px;
+    font-size: 42px;
 }
 #game-result p {
-    font-size: 16px;
+    font-size: 14px;
 
 }
 #win-man.lose {
 
   width: 600px;
 }
-.background-behind-img {
 
-  height: 200px;
- 
-}
 }
 
 
@@ -332,21 +330,19 @@
   
 }
 #game-result h1 {
-    font-size: 18px;
+    font-size: 40px;
 }
 #game-result p {
-    font-size: 14px;
+    font-size: 12px;
 
 }
 #win-man.lose {
 
   width: 350px;
 }
-.background-behind-img {
-
+.background-behind-img.lose-bg {
   height: 150px;
- 
-}
+  }
 }
 @keyframes beat{
 	to { transform: scale(1.1); }
