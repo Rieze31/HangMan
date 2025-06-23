@@ -213,9 +213,13 @@
 #win-man{
     position: relative;
   z-index: 1; 
-  width: 200px; 
-
+  width: 200px;
 }
+#win-man.lose {
+
+  width: 1000px;
+}
+
 .background-behind-img {
   position: absolute;
 
@@ -246,6 +250,9 @@
 #header  p {
     font-size: 14px;
 
+}
+#homepage h1{
+    font-size: 48px;
 }   
 #word-container{
     width: 80%;
@@ -260,7 +267,10 @@
   grid-template-rows: repeat(5, 1fr);   
   
 }
+#win-man.lose {
 
+  width: 900px;
+}
 
 
 }
@@ -268,7 +278,8 @@
 @media (max-width: 900px) {
   #word-container{
     width: 90%;
-    font-size: 20px;
+    font-size: 18px;
+     padding: 1rem 2rem;    
     gap: 15px;                 
 }
 #buttons{
@@ -278,6 +289,10 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);   
   
+}
+#win-man.lose {
+
+  width: 600px;
 }
 }
 
@@ -285,7 +300,8 @@
 @media (max-width: 600px) {
     #word-container{
     width: 90%;
-    font-size: 18px;
+     padding: 1rem 2rem; 
+    font-size: 15px;
     gap: 15px;                 
 }
 #buttons{
@@ -295,6 +311,10 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);   
   
+}
+#win-man.lose {
+
+  width: 400px;
 }
 }
 @keyframes beat{

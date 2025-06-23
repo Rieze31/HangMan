@@ -133,7 +133,7 @@ function showResult() {
    
     let result = document.getElementById("result");
     let resultText = document.getElementById("result-text");
-    let resultImage = document.querySelector(".result-image");
+    let resultImage = document.getElementById("win-man");
     let bg = document.querySelector(".background-behind-img");
     
     
@@ -153,12 +153,14 @@ function showResult() {
     bg.style.background = "radial-gradient(circle, #00ffff88, #00000000 70%)";
     resultText.innerHTML = `You have successfully guessed the word <span style="color:#00FFFF; font-weight:bold; text-transform:uppercase; font-family:Montserrat, sans-serif">${words[index]}</span>.`;
     resultImage.style.width = "200px";
+ 
+    resultImage.classList.remove("lose");
     resultImage.src = "img/alive.png"; 
     }, 1500);
     } else {
         disableAllButtons();
     fallingDown();
-    
+   
     setTimeout(() => {
         loseBg();
          gameResult.style.display = "block";
@@ -168,8 +170,12 @@ function showResult() {
     result.style.color = "#ff1e1e";
     bg.style.background = "radial-gradient(circle, #ff1e1e, #00000000 70%)";
     resultText.innerHTML = `You have failed to guess the word <span style="color:#ff1e1e; font-weight:bold; text-transform:uppercase; font-family:Montserrat, sans-serif">${words[index]}</span>.`;
+    
     resultImage.src = "img/dead.png";
-    setDeadImageSize(); 
+   resultImage.classList.add("lose");
+ 
+    
+    
     }, 5000);
      
    
@@ -237,19 +243,3 @@ function correctSound() {
     correct.currentTime = 0;
     correct.play();
 }
-function setDeadImageSize() {
-    let resultImage = document.querySelector('.result-image');
-    if (!resultImage || resultImage.src.indexOf('dead.png') === -1) return;
-    if (window.innerWidth <= 600) {
-        resultImage.style.width = "500px";
-    } else if(window.innerWidth <= 800) {
-        resultImage.style.width = "600px";
-    }   else if (window.innerWidth <= 900) {
-        resultImage.style.width = "800px";
-    } else if (window.innerWidth <= 1081) {
-        resultImage.style.width = "900px";
-    } else {
-        resultImage.style.width = "1000px";
-    }
-}
-window.addEventListener('resize', setDeadImageSize);
