@@ -267,6 +267,13 @@
   grid-template-rows: repeat(5, 1fr);   
   
 }
+#game-result h1 {
+    font-size: 36px;
+}
+#game-result p {
+    font-size: 18px;
+
+}
 #win-man.lose {
 
   width: 900px;
@@ -290,9 +297,21 @@
   grid-template-rows: repeat(5, 1fr);   
   
 }
+#game-result h1 {
+    font-size: 24px;
+}
+#game-result p {
+    font-size: 16px;
+
+}
 #win-man.lose {
 
   width: 600px;
+}
+.background-behind-img {
+
+  height: 200px;
+ 
 }
 }
 
@@ -311,6 +330,13 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);   
   
+}
+#game-result h1 {
+    font-size: 18px;
+}
+#game-result p {
+    font-size: 14px;
+
 }
 #win-man.lose {
 
